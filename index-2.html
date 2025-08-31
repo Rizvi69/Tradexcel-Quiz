@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>TradeXcel – Trade Finance Quiz</title>
+    <meta name="description" content="20-question professional quiz on Documentary Credits (UCP 600/ISBP), Murabaha, and Wakalah. No server required." />
+    <meta name="theme-color" content="#ff2fb3" />
+    <style>
+      /* Tiny placeholder so the page isn’t blank while JS loads */
+      html,body{height:100%}body{margin:0;display:flex;align-items:center;justify-content:center;background:#0b132b;color:#f5f7fa;font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Helvetica Neue,Arial}
+      .boot{max-width:560px;text-align:center;padding:24px;border-radius:16px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08)}
+      .muted{color:#c3d0e0;font-size:12px}
+      .spinner{width:22px;height:22px;border-radius:50%;border:3px solid rgba(255,255,255,.2);border-top-color:#ff2fb3;display:inline-block;animation:sp 1s linear infinite;margin-right:8px}
+      @keyframes sp{to{transform:rotate(360deg)}}
+    </style>
+  </head>
+  <body>
+    <noscript>
+      <div class="boot">
+        <p><strong>JavaScript is required</strong> to run this quiz.</p>
+        <p class="muted">Please enable JavaScript and reload.</p>
+      </div>
+    </noscript>
+    <div id="boot" class="boot">
+      <div><span class="spinner"></span>Loading TradeXcel Quiz…</div>
+      <div class="muted" style="margin-top:8px">If this takes more than a few seconds, check your internet connection.</div>
+    </div>
+
+    <!-- Main app code (created in this chat as a separate file: app.min.js) -->
+    <script src="app.min.js" onload="document.getElementById('boot')?.remove()" onerror="document.getElementById('boot').innerHTML='Failed to load app.min.js. Ensure this file is in the same folder as index.html.'"></script>
+  </body>
+</html>
